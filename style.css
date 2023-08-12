@@ -1,0 +1,24 @@
+/*ucus*/
+
+.ucus{
+    background-image:url(images/ucus.jpg) ;
+    background-position: center;
+    background-size: cover;
+}
+.baslik{
+    font-size: 60px;
+    padding: 10% 0 2% 20%;
+}
+#c1{
+    padding-bottom: 20%;
+}
+.aracKira{
+    background-image:url(images/auto.jpg) ;
+    background-position: center;
+    background-size: cover;
+}
+.otel{
+    background-image:url(images/hotels.jpg) ;
+    background-position: center;
+    background-size: cover;
+}

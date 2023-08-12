@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary  ">
+        <div class="container-fluid ">
+           
+          <a class="navbar-brand" href="index.html">ARI Tour</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Uçuşlar</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="otel.html">Oteller</a>
+               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="arackira.html">Araç Kiralama</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">İletişim</a>
+              </li>
+              
+            </ul>
+        
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Arama Yap" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Ara</button>
+            </form>
+            <button class="btn btn-outline-success" type="submit">Üye Ol!</button>
+          </div>
+        </div>
+      </nav>
+      <!--LG/MD-->
+      <!--oteller-->
+      <div class="otel d-none d-md-flex flex-column">
+        <h1 class="baslik text-white fw-bold">Size En Uygun Oteli Bulalım</h1>
+        <div class="container-fluid" id="c1">
+            <div class="row">
+                <div class="col-lg-2"> </div>
+                <div class="col-lg-8 bg-info p-4 ">
+                    <div class="d-flex flex-column">
+                        
+
+                        <!--input start-->
+                        <div class="d-flex align-items-center py-2">
+                            <!--Otel-->
+                            <div class="ms-2">
+                                <label for="exampleDataList" class="form-label mb-0 fs-8 fw-bold">Nerede Konaklamak İstiyorsunuz?</label>
+                                <input class="form-control " list="datalistOptions" id="exampleDataList" placeholder="Varış Yeri veya Otel Adı Giriniz">
+                                <datalist id="datalistOptions">
+                                     option value="İstanbul">
+                                    <option value="Ankara">
+                                    <option value="İzmir">
+                                    <option value="Antalya">
+                                    <option value="Muğla">
+                                </datalist>
+                            </div>
+                            <!--Otel -->
+                        
+                            <!--Giriş tarihi-->
+                            <div class="ms-3">
+                                <label for="" class="form-label mb-0 text-white fs-8 fw-bold ">Giriş Tarihi</label>
+                                <input type="date" class="form-control" value="none">
+                            </div>
+                            <!--Giriş Tarihi son son-->
+
+                            <!--Giriş Tarihi-->
+                            <div class="ms-2">
+                                <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Çıkış Tarihi</label>
+                                <input type="date" class="form-control">
+                            </div>
+
+                            <!--Giriş Tarihi Son-->
+                             <!--Oda Class start-->
+                            <!--Yetişkin Sayısı start-->
+                            <div class="ms-2">
+                                <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Yetişkin</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>1</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
+                                  </select>
+                            </div>
+                            <!--Yetişkin Sayısı end-->
+                            <!--Çocuk Sayısı start-->
+                            <div class="ms-2">
+                              <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Çocuk</label>
+                              <select class="form-select" aria-label="Default select example">
+                                  <option selected>1 </option>
+                                  <option value="1">2</option>
+                                  <option value="2">3 </option>
+                                  <option value="3">4</option>
+                                </select>
+                          </div>
+                          <!--Çocuk Sayısı end-->
+                           <!--oda Sayısı start-->
+                           <div class="ms-2">
+                            <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Oda Sayısı</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>1 </option>
+                                <option value="1">2</option>
+                                <option value="2">3 </option>
+                                <option value="3">4</option>
+                              </select>
+                        </div>
+                        <!--Oda Sayısı end-->
+                        <!--Oda Class end-->
+
+                        </div>
+                        <!--input end-->
+
+                        <!--Check buton-->
+                        <div class="d-flex align-items-center justify-content-between pt-2">
+                            <div class="d-flex flex-column">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                      İki Yıldızlı
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      Üç Yıldızlı
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="btn btn-primary fs-5 fw-bold text-white"> Otel Ara</div>
+                        </div>
+                        <!--Check buton end-->
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-lg-2"> </div>
+            </div>
+        </div>
+        
+
+      </div>
+      <!--LG/MD end -->
+      
+      <!--SM-->
+      <div class="d-flex d-md-none d-xl-none flex-column p-4 bg-info">
+       
+        <!--input-->
+        <div class="ms-2">
+          <label for="exampleDataList" class="form-label mb-0 fs-8 fw-bold">Nerede Konaklamak İstiyorsunuz?</label>
+          <input class="form-control " list="datalistOptions" id="exampleDataList" placeholder="Varış Yeri veya Otel Adı Giriniz">
+          <datalist id="datalistOptions">
+               option value="İstanbul">
+              <option value="Ankara">
+              <option value="İzmir">
+              <option value="Antalya">
+              <option value="Muğla">
+          </datalist>
+      </div> 
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          İki Yıldızlı
+        </label>
+      </div>
+     
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        ÜçYıldızlı
+      </label>
+    </div>
+
+        <!--input-->
+
+        <!--Giriş-Çıkış-->
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <label for="" class="form-label mb-0 fs-8 fw-bold ms-2">Giriş Tarihi</label>
+            <input type="date" name="" id="" class="form-control">
+          </div>
+          <div>
+            <label for="" class="form-label mb-0 fs-8 fw-bold ms-2">Çıkış Tarihi</label>
+            <input type="date" name="" id="" class="form-control">
+          </div>
+
+        </div>
+        <!--Giriş-Çıkış-->
+
+        <!--Oda Class-->
+        <!--Yetişkin Sayısı start-->
+        <div class="ms-2">
+          <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Yetişkin</label>
+          <select class="form-select" aria-label="Default select example">
+              <option selected>1</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+            </select>
+      </div>
+      <!--Yetişkin Sayısı end-->
+      <!--Çocuk Sayısı start-->
+      <div class="ms-2">
+        <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Çocuk</label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>1 </option>
+            <option value="1">2</option>
+            <option value="2">3 </option>
+            <option value="3">4</option>
+          </select>
+    </div>
+    <!--Çocuk Sayısı end-->
+     <!--oda Sayısı start-->
+     <div class="ms-2">
+      <label for="" class="form-label mb-0 text-white fs-8 fw-bold">Oda Sayısı</label>
+      <select class="form-select" aria-label="Default select example">
+          <option selected>1 </option>
+          <option value="1">2</option>
+          <option value="2">3 </option>
+          <option value="3">4</option>
+        </select>
+  </div>
+  <!--Oda Sayısı end-->
+        <!--Oda Class-->
+
+        <!--Buton-->
+        <div class="btn btn-primary fs-5 fw-bold text-white mt-3">Otel Ara</div>
+        <!--Buton-->
+
+      </div>
+
+      <!--oteller ve araç kiralama-->
+      <div class="contanier pc-5 mt-5 mb-5 ms-2">
+        <h3>Tasarladığınız Rotayı Seçin.</h3>
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <div class="btn btn-primary rounded-pill fs-8">İstanbul</div>
+            <div class="btn btn-light rounded-pill fs-8">İzmir</div>
+            <div class="btn btn-light rounded-pill fs-8">Antalya</div>
+            <div class="btn btn-light rounded-pill fs-8">Muğla</div>
+            <div class="btn btn-light rounded-pill fs-8">Ankara</div>
+          </div>
+          <div>
+            <div class="btn btn-link fs-8">Daha Fazla Otel</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--oteller lg/md-->
+      <div class="container d-none d-md-flex flex-column">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8 d-flex ">
+            <div class="card border-0 me-5" style="width: 18rem;">
+              <img src="images/otel1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Antalya,Türkiye</div>
+                <h5 class="card-title">Alanya Büyük Otel</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Gecelik</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+            <div class="card border-0 me-5" style="width: 18rem;">
+              <img src="images/otel2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Antalya,Türkiye</div>
+                <h5 class="card-title">Kemer Great Otel</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Gecelik</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+            <div class="card border-0" style="width: 18rem;">
+              <img src="images/otel3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Muğla,Türkiye</div>
+                <h5 class="card-title">Gökova Otel</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Gecelik</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+      </div>
+      <!--oteller lg/md-->
+
+      <!--oteller sm-->
+      <div class="container-fluid d-flex d-md-none d-xl-none flex-column">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10  ">
+            <div class="card border-0 me-5" style="width: 18rem;">
+              <img src="images/otel1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Antalya,Türkiye</div>
+                <h5 class="card-title">Alanya Büyük Otel</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Gecelik</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+            <div class="card border-0 me-5" style="width: 18rem;">
+              <img src="images/otel2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Antalya,Türkiye</div>
+                <h5 class="card-title">Kemer Great Otel</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Gecelik</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+            <div class="card border-0" style="width: 18rem;">
+              <img src="images/otel3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Muğla,Türkiye</div>
+                <h5 class="card-title">Gökova Otel</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Gecelik</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+      </div>
+      <!--oteller sm-->
+
+      <!--Araba kiralama  LG/MD-->
+      <div class="container d-none d-md-flex d-xl-flex flex-column mt-5">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8 d-flex ">
+            <div class="card border-0 me-5" style="width: 18rem;">
+              <img src="images/ar1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Antalya,Türkiye</div>
+                <h5 class="card-title">ASM Rent a Car</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Günlük</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+            <div class="card border-0 me-5" style="width: 18rem;">
+              <img src="images/ar2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Antalya,Türkiye</div>
+                <h5 class="card-title">ASM Rent a Car</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Günlük</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+            <div class="card border-0" style="width: 18rem;">
+              <img src="images/ar3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Muğla,Türkiye</div>
+                <h5 class="card-title">ASM Rent a Car</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Günlük</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+      </div>
+      <!--Araba kiralama  LG/MD end-->
+
+      <!--Araba kiralama  sM-->
+      <div class="container-fluid d-flex d-md-none d-xl-none flex-column">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10 ">
+            <div class="card border-0 me-5" style="width: 18rem;">
+              <img src="images/ar1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Antalya,Türkiye</div>
+                <h5 class="card-title">ASM Rent a Car</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Günlük</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+            <div class="card border-0 me-5" style="width: 18rem;">
+              <img src="images/ar2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Antalya,Türkiye</div>
+                <h5 class="card-title">ASM Rent a Car</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Günlük</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+            <div class="card border-0" style="width: 18rem;">
+              <img src="images/ar3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted fs-8">Muğla,Türkiye</div>
+                <h5 class="card-title">ASM Rent a Car</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+
+                  <p class="card-text">$99 <span class="fs-8">Günlük</span></p>
+                </div>
+                
+                <a href="#" class="btn btn-primary">İncele</a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+      </div>
+
+      <!--Araba kiralama  SM end-->
+
+       <!--oteller ve araç kiralama-->
+
+       <!--Footer-->
+        <div class="container bg-primary p-5 mt-5">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4 class="text-warning pb-2">Keşfet</h4>
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis saepe nihil nam aperiam? Cupiditate, nemo?</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4 class="text-warning pb-2">Partnerler</h4>
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis saepe nihil nam aperiam? Cupiditate, nemo?</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4 class="text-warning pb-2">Şirketler</h4>
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis saepe nihil nam aperiam? Cupiditate, nemo?</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4 class="text-warning pb-2">Yardım</h4>
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis saepe nihil nam aperiam? Cupiditate, nemo?</p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+ 
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
